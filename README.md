@@ -1,76 +1,27 @@
 # GitHub Auto Commiter
 
-Does your GitHub Graph looks like a noob with a few number of Commits and Push? Do you want to have your contribution graph with lots of commit like pro. This project can helps you!
+Membuat satu commit untuk setiap tanggal pada 2026, mulai 1 Januari sampai hari ini (maksimum 31 Desember). Tanggal yang belum tiba tidak dibuat. Menjalankan ulang skrip melewati tanggal yang sudah dibuat oleh skrip ini.
 
-## Introduction
+## Persiapan
 
-The project generates random commit at random past days, months, years. uses [Moment](https://www.npmjs.com/package/moment), a JavaScript date library for parsing, validating, manipulating, and formatting dates. It allows you to make a commit on past date done by subtracting the years from given date and make commits over a period of regular days. Also you can do alot with this code.
-
-## Installation
-
-### Clone or fork the repository
+Diperlukan Node.js dan Git. Clone repositori Anda dan atur nama serta email Git yang terhubung ke akun GitHub:
 
 ```sh
-# Clone method
-$ git clone https://github.com/gifaldyazkaa/auto-commiter.git
-$ cd auto-commiter
-
-# If you forked this repo
-$ git clone https://github.com/your-username/auto-commiter.git
-$ cd auto-commiter
+git clone https://github.com/Yasir230/auto-commiter123.git
+cd auto-commiter123
+git config user.name "Nama Anda"
+git config user.email "email-terverifikasi@example.com"
 ```
 
-### Install Required Dependencies
+Pastikan perubahan yang ada sudah disimpan atau di-commit, lalu jalankan:
 
 ```sh
-# Yarn
-$ yarn install
+npm start
+git push
 ```
 
-### Run the project to see the magic of moment package
-
-```sh
-# Yarn
-$ yarn start
-# dum
-$ dum start
-```
-
-Boom! You can see the commit date in terminal.
-
-## Scripts
-
-Available scripts at [package.json](./package.json)
-
-| Name  | Script       | Description              |
-| ----- | ------------ | ------------------------ |
-| Start | `yarn start` | Compile & Run the script |
-| Lint  | `yarn lint`  | Lint checking            |
-
-## Commits
-
-By Default, While you running `yarn start`, It will generates `700` GitHub Commits in `1.1` Past Year.
-
-### You can change how many value, or year, days as you wants.
-
-```js
-subtract(year, "y");
-```
-
-Year here represents the year to start the commits. Greater the value of year, more dense the graph along main axis. Example: `subtract(2,'y')`
-
-```js
-add(days, "d");
-```
-
-Difference of commits between timestamps. Less the value of days, more dense the contributon graph will be. Example: `add(4,'d')`
-
-```js
-makeCommit(700);
-```
-
-At the end line of `index.js`, You'll see this. This is how many you want to make GitHub Commits. By Default, It's set to `700`. You can change the value to `1000`, higher, or more less.
+Skrip membuat commit secara lokal dan tidak melakukan push otomatis. Jalankan lagi setelah tanggal berikutnya tiba. Agar GitHub menghitung kontribusi, commit harus berada di branch default repositori yang memenuhi syarat dan email commit harus terhubung ke akun Anda. Warna hijau bergantung pada skala kontribusi GitHub; satu commit per hari tidak menjamin tingkat warna tertentu.
 
 ## License
 
-This Project is Licensed Under [MIT License](./LICENSE)
+[MIT](./LICENSE)
